@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- 
+    SITE 1101 Principles of Information Systems 
+    (c)2024 by Shukran Karimli 
+    Submitted in partial fulfillment of the requirements of the course.
+-->
+<html>
+    <head>
+        <title>Homework 3: Programming art</title>
+        <link rel="stylesheet" href="styles.css">  
+        <script type="text/javascript" src="scripts.js"></script>      
+    </head>
+    <body>
+        <header>
+            <img src="logo.png" alt="team logo" height="200" width="200">
+            <h1>Welcome to team A.L.S.O's website!</h1>
+        
+            <nav class="navbar">
+                <a href="index.html" class="navbar-link">Home</a>
+                <a href="team-members.html" class="navbar-link">Members of A.L.S.O</a>
+                <a href="web-project.html" class="navbar-link">About our project</a>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <div style="text-align:center">
+                    <canvas id="art-canvas" width="700" height="600">
+                        Sorry ... your browser doesn't support the HTML5 canvas element.
+                    </canvas>
+                </div>
+            </section>
+            </main>
+            <footer>
+                <p>&copy; 2024 Website Project. All Rights Reserved.</p>
+                <img src="media/ada_logo_color.png" alt="ADA logo">
+            </footer>
+
+
+        <script type="text/javascript">
+            // Get reference to the 2D context of the canvas
+            let canvas = document.getElementById("art-canvas");
+            let context = canvas.getContext("2d");
+            // Set the color for drawing lines using red, green and blue components
+            // context.strokeStyle = 'rgb(255, 0, 0)';
+            context.strokeStyle = `rgb(${Math.floor(255 * Math.random())}, ${Math.floor(255 * Math.random())}, ${Math.floor(255 * Math.random())})`;
+            DrawHexagonalSpiral(context);
+        </script>
+    </body>
+</html>
